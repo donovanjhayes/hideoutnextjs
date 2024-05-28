@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Carousel from '@/components/carousel'
-
 
 export default function Home() {
   return (
@@ -22,7 +20,7 @@ export default function Home() {
             Rentals{" "}
             <Image
               src="/hideoutvacation.svg"
-              alt="Vercel Logo"
+              alt="Hideout Vacation Rentals Logo"
               className="dark:invert place-items-center"
               width={100}
               height={24}
@@ -66,7 +64,7 @@ export default function Home() {
           <Image
             className="object-fill relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-lg"
             src="/northbeach.jpg"
-            alt="Mountains Artwork"
+            alt="North Beach Photo"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             width={280}
             height={37}
@@ -77,7 +75,7 @@ export default function Home() {
           <Image
             className="object-fill relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-lg"
             src="/northbeach.jpg"
-            alt="Mountains Artwork"
+            alt="North Beach Photo"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             width={280}
             height={37}
@@ -117,7 +115,7 @@ export default function Home() {
 */}     <div>
         </div>
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="/booking"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
