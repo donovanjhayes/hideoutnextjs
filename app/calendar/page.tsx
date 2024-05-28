@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Carousel from '@/components/carousel'
-import Iframe from 'react-iframe'
+// import Iframe from 'react-iframe'
 
 
 export default function Home() {
@@ -32,15 +32,15 @@ export default function Home() {
           {/*</a>*/}
         </div>
       </div>
+
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-1 lg:text-left">
         <div className ="">
-        <Iframe url="https://login.smoobu.com/en/cockpit/widget/show-calendar-iframe/1033732/c22875e49828e2655f7ba23da50b88125546858782c62311d23cc76f6c464810"
-        width="640px"
-        height="320px"
-        id=""
-        className=""
-        display="block"
-        position="relative"/>
+        <iframe
+          src="https://login.smoobu.com/en/cockpit/widget/show-calendar-iframe/1033732/c22875e49828e2655f7ba23da50b88125546858782c62311d23cc76f6c464810"
+          width={800}
+          height={500}
+          loading="lazy"
+        ></iframe>;
         </div>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
