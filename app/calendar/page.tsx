@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Carousel from '@/components/carousel'
-// import Iframe from 'react-iframe'
 
 
 export default function Home() {
