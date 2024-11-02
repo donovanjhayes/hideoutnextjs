@@ -84,7 +84,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className="mb-3 text-2xl font-semibold">
-            Book Direct Now{" "}
+            Book Directly Now{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
@@ -102,15 +102,15 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className="mb-3 text-2xl font-semibold">
-            More Photos and Info at Airbnb{" "}
+            More Photos and Info{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            See more photos, contact us directly, and read reviews from prior guests.</p>
-            <br />
-            <p className="m-0 max-w-[30ch] text-sm opacity-50"> ...but book directly for the best price.
+            at Airbnb. See more photos, and read our reviews.</p>
+
+            <p className="m-0 max-w-[30ch] text-sm opacity-50"> ...be sure to come back to book directly for the best price.
           </p>
         </a>
       

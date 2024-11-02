@@ -61,40 +61,53 @@ const Home = () => {
               height={24}
               priority
             />
+            {/*Need to make a link back to home*/}
+{/*            <div>
+            <a
+              href="/"
+              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className="mb-3 text-2xl font-semibold">
+                Home{" "}
+              </h2>
+            </a>
+            </div>*/}
 
 
         </div>
       </div>
       <br />
       <div>
-
-      <div className="flex-col items-center">
-{/*          <div className="flex w-1/2 flex-wrap">
-            <div className="w-1/2 p-1 md:p-2">*/}
-                <iframe height = "450px"
+        <div className="flex flex-col items-center">
+                <iframe height = "300px"
                   src="https://login.smoobu.com/en/cockpit/widget/show-calendar-iframe/1033732/c22875e49828e2655f7ba23da50b88125546858782c62311d23cc76f6c464810"
-
                   loading="lazy"
                 ></iframe>
-{/*            </div>
-          </div>*/}
-
-            <>
-        <div>
-      </div>
-      <h2 className="text-xl font-mono flex items-center">
-      Select your dates below. The rates shown includes all taxes and fees.
-      </h2>
-      <div className ="flex-col items-center">
-      <div id="apartmentIframeAll"></div>
-      </div>
-    </>
-
-
-
-
         </div>
+        <h2 className="text-xl font-mono justify-center" align ="center">
+        <br/>
+        Select your dates below. <br/>The rates shown includes all taxes and fees.
+        </h2>
+        <br/>
+        <div className ="flex-col items-center">
+          <div id="apartmentIframeAll"></div>
+        
       </div>
+      </div>
+{/*        <h2 className="text-xl font-mono justify-center" align ="center">
+        <br/>
+        Questions? Contact us<br/>
+        </h2>
+        <div>
+        <h2 className="text-xl font-mono justify-center" align ="center">
+        <b>info@hideoutvacation.com</b> <br/>
+        and a human being will get back to you within a day
+        </h2>*/}
+
+
+        {/*</div>*/}
 
 
 
