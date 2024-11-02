@@ -30,157 +30,50 @@ export default function Home() {
             />
         </div>
       </div>
-       {/*<div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-         <div class="-m-1 flex flex-wrap md:-m-2">
-           <div class="flex w-1/3 flex-wrap">
-             <div class="w-full p-1 md:p-2">
-               <img
-                alt="gallery"
-                class="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-            </div>
-          </div>
-          <div class="flex w-1/3 flex-wrap">
-            <div class="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                class="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
-            </div>
-          </div>
-          <div class="flex w-1/3 flex-wrap">
-            <div class="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                class="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
-            </div>
-          </div>
-          <div class="flex w-1/3 flex-wrap">
-            <div class="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                class="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
-            </div>
-          </div>
-          <div class="flex w-1/3 flex-wrap">
-            <div class="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                class="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp" />
-            </div>
-          </div>
-          <div class="flex w-1/3 flex-wrap">
-            <div class="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                class="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
-            </div>
-          </div>
-        </div>
-      </div>*/}
-      <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
-  <div class="-m-1 flex flex-wrap md:-m-2">
-    <div class="flex w-1/2 flex-wrap">
-      <div class="w-1/2 p-1 md:p-2">
+      <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+  <div className="-m-1 flex flex-wrap md:-m-2">
+    <div className="flex w-1/2 flex-wrap">
+      <div className="w-1/2 p-1 md:p-2">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center"
-          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
+          className="block h-full w-full rounded-lg object-cover object-center"
+          src="/housenumber.jpg" />
       </div>
-      <div class="w-1/2 p-1 md:p-2">
+      <div className="w-1/2 p-1 md:p-2">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center"
-          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+          className="block h-full w-full rounded-lg object-cover object-center"
+          src="/tub1.jpg" />
       </div>
-      <div class="w-full p-1 md:p-2">
+      <div className="w-full p-1 md:p-2">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center"
-          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+          className="block h-full w-full rounded-lg object-cover object-center"
+          src="/northbeach.jpg" />
       </div>
     </div>
-    <div class="flex w-1/2 flex-wrap">
-      <div class="w-full p-1 md:p-2">
+    <div className="flex w-1/2 flex-wrap">
+      <div className="w-full p-1 md:p-2">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center"
-          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+          className="block h-full w-full rounded-lg object-cover object-center"
+          src="/fireplace.jpg" />
+      </div>
+      <div className="w-1/2 p-1 md:p-2">
+        <img
+          alt="gallery"
+          className="block h-full w-full rounded-lg object-cover object-center"
+          src="/smores.jpg" />
       </div>
       <div class="w-1/2 p-1 md:p-2">
         <img
           alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center"
-          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
-      </div>
-      <div class="w-1/2 p-1 md:p-2">
-        <img
-          alt="gallery"
-          class="block h-full w-full rounded-lg object-cover object-center"
-          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+          className="block h-full w-full rounded-lg object-cover object-center"
+          src="/bedroom.jpg" />
       </div>
     </div>
   </div>
 </div>
-
-
-
-      {/*<div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-2 lg:text-left">
-            </div>
-        <div className="">
-          <Image
-            className="object-fill relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-lg max-width"
-            src="/bedroom.jpg"
-            alt="Main Floor Bedroom"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={280}
-            height={37}
-            style={imageStyle}
-            priority
-          />
-        </div>
-        <div className="">
-          <Image
-            className="object-fill relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-lg"
-            src="/fireplace.jpg"
-            alt="Fireplace"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={280}
-            height={37}
-            style={imageStyle}
-            priority
-          />
-        </div>
-        <div className="">
-          <Image
-            className="object-fill relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-lg"
-            src="/northbeach.jpg"
-            alt="North Beach Photo"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={280}
-            height={37}
-            style={imageStyle}
-            priority
-          />
-        </div>
-        <div className="">
-          <Image
-            className="object-fill relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-lg"
-            src="/mountains.jpg"
-            alt="North Beach Photo"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={280}
-            height={37}
-            style={imageStyle}
-            priority
-          />
-        </div>*/}
-
-
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
     <div>
         </div>
@@ -191,31 +84,33 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className="mb-3 text-2xl font-semibold">
-            Book Now{" "}
+            Book Direct Now{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
             {/*Learn about Next.js in an interactive course with&nbsp;quizzes!*/}
-            Check our calendar for availability and rates.
+            Check our calendar for availability and our lowest booking rates.
           </p>
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://airbnb.com/h/hideoutvacation"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className="mb-3 text-2xl font-semibold">
-            More Photos and Info{" "}
+            More Photos and Info at Airbnb{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            See more photos, contact us directly, and read reviews from prior guests
+            See more photos, contact us directly, and read reviews from prior guests.</p>
+            <br />
+            <p className="m-0 max-w-[30ch] text-sm opacity-50"> ...but book directly for the best price.
           </p>
         </a>
       
