@@ -36,19 +36,19 @@ export default function Home() {
     <div className="flex w-1/2 flex-wrap">
       <div className="w-1/2 p-1 md:p-2">
         <img
-          alt="gallery"
+          alt="housenumber"
           className="block h-full w-full rounded-lg object-cover object-center"
           src="/housenumber.jpg" />
       </div>
       <div className="w-1/2 p-1 md:p-2">
         <img
-          alt="gallery"
+          alt="tub"
           className="block h-full w-full rounded-lg object-cover object-center"
           src="/tub1.jpg" />
       </div>
       <div className="w-full p-1 md:p-2">
         <img
-          alt="gallery"
+          alt="northbeach"
           className="block h-full w-full rounded-lg object-cover object-center"
           src="/northbeach.jpg" />
       </div>
