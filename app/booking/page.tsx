@@ -1,12 +1,13 @@
 
 'use client'
+import React from 'react';
 import Image from "next/image";
-import Carousel from '@/components/carousel'
-import Script from 'next/script';
-import BookingTool from '@/components/BookingTool'
-import asyncBook from '@/components/BookingTool'
+// import Carousel from '@/components/carousel'
+// import Script from 'next/script';
+// import BookingTool from '@/components/BookingTool'
+// import asyncBook from '@/components/BookingTool'
 import { useEffect } from 'react';
-import Head from 'next/head';
+// import Head from 'next/head';
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
     script.type = 'text/javascript';
     script.async = true;
     document.body.appendChild(script);
+
 
     script.onload = () => {
       // Initialize the BookingToolIframe after the script loads
@@ -86,7 +88,7 @@ const Home = () => {
                   loading="lazy"
                 ></iframe>
         </div>
-        <h2 className="text-xl font-mono justify-center" align ="center">
+        <h2 className="text-xl font-mono justify-center center">
         <br/>
         Select your dates below. <br/>The rates shown includes all taxes and fees.
         </h2>

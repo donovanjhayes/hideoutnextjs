@@ -1,17 +1,41 @@
 
 'use client'
+import React from 'react';
 import Image from "next/image";
-import Carousel from '@/components/carousel'
-import Script from 'next/script';
-import BookingTool from '@/components/BookingTool'
-import asyncBook from '@/components/BookingTool'
-// import { useEffect } from 'react';
-// import Head from 'next/head'; # Check out https://www.embla-carousel.com/examples/predefined/
+// import Carousel from '@/components/carousel'
+// import Script from 'next/script';
+// import BookingTool from '@/components/BookingTool'
+// import asyncBook from '@/components/BookingTool'
+import { useEffect } from 'react';
+// import Head from 'next/head';
 
 
+const Home = () => {
 
-export default function Home() {
+  useEffect(() => {
+    // Load the script for the BookingToolIframe
+    const script = document.createElement('script');
+    script.src = 'https://login.smoobu.com/js/Settings/BookingToolIframe.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
 
+    script.onload = () => {
+      // Initialize the BookingToolIframe after the script loads
+      if (window.BookingToolIframe) {
+        window.BookingToolIframe.initialize({
+          url: 'https://login.smoobu.com/en/booking-tool/iframe/335356',
+          baseUrl: 'https://login.smoobu.com',
+          target: '#apartmentIframeAll',
+        });
+      }
+    };
+
+    // Clean up the script on component unmount
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -37,27 +61,53 @@ export default function Home() {
               height={24}
               priority
             />
+            {/*Need to make a link back to home*/}
+{/*            <div>
+            <a
+              href="/"
+              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className="mb-3 text-2xl font-semibold">
+                Home{" "}
+              </h2>
+            </a>
+            </div>*/}
 
 
         </div>
       </div>
+      <br />
       <div>
-      <p>Where is this</p>
-              <div className ="">
-        <iframe
-          src="https://login.smoobu.com/en/cockpit/widget/show-calendar-iframe/1033732/c22875e49828e2655f7ba23da50b88125546858782c62311d23cc76f6c464810"
-          width={800}
-          height={500}
-          loading="lazy"
-        ></iframe>
-
-        <p>and this?</p>
-
-
-
-
+        <div className="flex flex-col items-center">
+                <iframe height = "300px"
+                  src="https://login.smoobu.com/en/cockpit/widget/show-calendar-iframe/1033732/c22875e49828e2655f7ba23da50b88125546858782c62311d23cc76f6c464810"
+                  loading="lazy"
+                ></iframe>
         </div>
+        <h2 className="text-xl font-mono justify-center center">
+        <br/>
+        Select your dates below. <br/>The rates shown includes all taxes and fees.
+        </h2>
+        <br/>
+        <div className ="flex-col items-center">
+          <div id="apartmentIframeAll"></div>
+        
       </div>
+      </div>
+{/*        <h2 className="text-xl font-mono justify-center" align ="center">
+        <br/>
+        Questions? Contact us<br/>
+        </h2>
+        <div>
+        <h2 className="text-xl font-mono justify-center" align ="center">
+        <b>info@hideoutvacation.com</b> <br/>
+        and a human being will get back to you within a day
+        </h2>*/}
+
+
+        {/*</div>*/}
 
 
 
@@ -65,5 +115,6 @@ export default function Home() {
 
   );
 }
+export default Home;
 
 

@@ -1,6 +1,8 @@
 'use client'
-import { useEffect } from 'react';
+import React from 'react';
+import { useEffect } from 'React';
 import Head from 'next/head';
+
 
 const home = () => {
   useEffect(() => {

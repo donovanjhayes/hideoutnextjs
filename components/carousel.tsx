@@ -1,7 +1,8 @@
 // carousel.tsx
 'use client'
 import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
+// import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 
 const Carousel = ({
   data,
@@ -11,21 +12,21 @@ const Carousel = ({
   }[]
 }) => {
   // State and Ref initialization
-  const [currentImg, setCurrentImg] = useState(0)
-  const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 })
-  const carouselRef = useRef(null)
+  // const [currentImg, setCurrentImg] = useState(0)
+  // const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 })
+  // const carouselRef = useRef(null)
 
   // useEffect to get the initial carousel size
-  useEffect(() => {
-    let elem = carouselRef.current as unknown as HTMLDivElement
-    let { width, height } = elem.getBoundingClientRect()
-    if (carouselRef.current) {
-      setCarouselSize({
-        width,
-        height,
-      })
-    }
-  }, [])
+  // useEffect(() => {
+  //   let elem = carouselRef.current as unknown as HTMLDivElement
+  //   let { width, height } = elem.getBoundingClientRect()
+  //   if (carouselRef.current) {
+  //     setCarouselSize({
+  //       width,
+  //       height,
+  //     })
+  //   }
+  // }, [])
 
   return (
     <div>

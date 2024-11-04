@@ -1,5 +1,6 @@
+import React from 'react';
 import Image from "next/image";
-import Carousel from '@/components/carousel'
+// import Carousel from '@/components/carousel'
 
 
 export default function Home() {

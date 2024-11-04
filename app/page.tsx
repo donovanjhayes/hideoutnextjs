@@ -1,18 +1,19 @@
 import Image from "next/image";
+import React from 'react';
 // Initialization for ES Users
-import {
-  Carousel,
-  initTWE,
-} from "tw-elements";
+// import {
+//   Carousel,
+//   initTWE,
+// } from "tw-elements";
 
-// initTWE({ Carousel });
+// // initTWE({ Carousel });
 
 export default function Home() {
-  const imageStyle = {
-  borderRadius: '8px',
-  // borderRadius: '8px';
-  border: '3px ridge rgba(28,110,164,0.18)',
-}
+//   const imageStyle = {
+//   borderRadius: '8px',
+//   // borderRadius: '8px';
+//   border: '3px ridge rgba(28,110,164,0.18)',
+// }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -65,7 +66,7 @@ export default function Home() {
           className="block h-full w-full rounded-lg object-cover object-center"
           src="/smores.jpg" />
       </div>
-      <div class="w-1/2 p-1 md:p-2">
+      <div className="w-1/2 p-1 md:p-2">
         <img
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
