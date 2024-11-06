@@ -6,10 +6,15 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import { GoogleTagManager } from '@next/third-parties/google'
+
+
 export const metadata: Metadata = {
   title: "Hideout Vacations",
   description: "Book your next Poconos Getaway",
 };
+
+// # Help on 3rd parties: https://nextjs.org/docs/pages/api-reference/components/head 
 
 export default function RootLayout({
   children,
@@ -19,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+            <GoogleTagManager gtmId="G-B6CZTMZ81K"/>
     </html>
   );
 }

@@ -2,12 +2,13 @@
 'use client'
 import React from 'react';
 import Image from "next/image";
+// import Head from 'next/head';
 // import Carousel from '@/components/carousel'
 // import Script from 'next/script';
 // import BookingTool from '@/components/BookingTool'
 // import asyncBook from '@/components/BookingTool'
 import { useEffect } from 'react';
-// import Head from 'next/head';
+
 
 
 
