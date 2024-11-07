@@ -9,10 +9,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.0.3",
     "@next/third-parties": "^15.0.2",
+    "@types/mdx": "^2.0.13",
     "@vercel/speed-insights": "^1.0.14",
     "embla-carousel": "^8.3.1",
-    "next": "^15.0.2",
+    "next": "^15.0.3-canary.9",
     "react": "^18",
     "react-dom": "^18",
     "tw-elements": "^2.0.0",
