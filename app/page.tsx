@@ -1,4 +1,11 @@
 import Image from "next/image";
+import houseNumber from "../public/housenumber.jpg";
+import tub from "../public/tub1.jpg";
+import northbeach from "../public/northbeach.jpg";
+import fireplace from "../public/fireplace.jpg";
+import livingroom from "../public/livingroom.jpg";
+import smores from "../public/smores.jpg";
+import bedroom from "../public/bedroom.jpg";
 // import React from 'react';
 // Initialization for ES Users
 // import {
@@ -35,42 +42,42 @@ export default function Home() {
   <div className="-m-1 flex flex-wrap md:-m-2">
     <div className="flex w-1/2 flex-wrap">
       <div className="w-1/2 p-1 md:p-2">
-        <img
+        <Image
           alt="housenumber"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src="/housenumber.jpg" />
+          src={houseNumber} />
       </div>
       <div className="w-1/2 p-1 md:p-2">
-        <img
+        <Image
           alt="tub"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src="/tub1.jpg" />
+          src={tub} />
       </div>
       <div className="w-full p-1 md:p-2">
-        <img
+        <Image
           alt="northbeach"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src="/northbeach.jpg" />
+          src={northbeach} />
       </div>
     </div>
     <div className="flex w-1/2 flex-wrap">
       <div className="w-full p-1 md:p-2">
-        <img
+        <Image
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src="/fireplace.jpg" />
+          src={fireplace} />
       </div>
       <div className="w-1/2 p-1 md:p-2">
-        <img
+        <Image
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src="/smores.jpg" />
+          src={smores} />
       </div>
       <div className="w-1/2 p-1 md:p-2">
-        <img
+        <Image
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src="/bedroom.jpg" />
+          src={bedroom} />
       </div>
     </div>
   </div>
