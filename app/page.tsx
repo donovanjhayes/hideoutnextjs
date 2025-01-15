@@ -71,13 +71,15 @@ export default function Home() {
         <Image
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src={smores} />
+          src={smores} 
+          placeholder="blur"/>
       </div>
       <div className="w-1/2 p-1 md:p-2">
         <Image
           alt="gallery"
           className="block h-full w-full rounded-lg object-cover object-center"
-          src={bedroom} />
+          src={bedroom} 
+          placeholder="blur"/>
       </div>
     </div>
   </div>
