@@ -3,7 +3,6 @@ import houseNumber from "@/public/housenumber.jpg";
 import tub from "@/public/tub1.jpg";
 import northbeach from "@/public/northbeach.jpg";
 import fireplace from "@/public/fireplace.jpg";
-import livingroom from "@/public/livingroom.jpg";
 import smores from "@/public/smores.jpg";
 import bedroom from "@/public/bedroom.jpg";
 // import React from 'react';
