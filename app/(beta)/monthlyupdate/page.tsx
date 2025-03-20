@@ -5,6 +5,9 @@ import northbeach from "@/public/northbeach.jpg";
 import fireplace from "@/public/fireplace.jpg";
 import smores from "@/public/smores.jpg";
 import bedroom from "@/public/bedroom.jpg";
+import fs from 'fs'
+import * as path from 'path';
+import matter from 'gray-matter'
 // import React from 'react';
 // Initialization for ES Users
 // import {
@@ -15,6 +18,30 @@ import bedroom from "@/public/bedroom.jpg";
 // // initTWE({ Carousel });
 
 export default function Home() {
+
+    // 1) Set blogs directory
+  const blogDir = "posts"
+
+  // 2) Find all files in the blog directory
+  console.log(path)
+  // const files = fs.readdirSync(path.join(blogDir))
+
+  // 3) For each blog found
+  // const blogs = files.map(filename => {
+
+    // 4) Read the content of that blog
+    // const fileContent = fs.readFileSync(path.join(blogDir, filename), 'utf-8')
+
+    // 5) Extract the metadata from the blog's content
+    // const { data: frontMatter } = matter(fileContent)
+
+    // 6) Return the metadata and page slug WHERE TO PLACE THIS 2.13.25
+
+      //     meta: frontMatter,
+      // slug: filename.replace('.mdx', '')
+  // })
+
+  
 //   const imageStyle = {
 //   borderRadius: '8px',
 //   // borderRadius: '8px';
@@ -24,17 +51,15 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-            Hideout <br/>
-            {" "}Vacation <br/>
-            Rentals{" "}
-            <Image
+          <h1>Poconos Updates</h1>
+{/*            <Image
               src="/hideoutvacation.svg"
               alt="Hideout Vacation Rentals Logo"
               className="dark:invert place-items-center"
               width={100}
               height={24}
               priority
-            />
+            />*/}
         </div>
       </div>
       <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
@@ -123,6 +148,10 @@ export default function Home() {
           </p>
         </a>
       
+      </div>
+      <div>
+
+      <p> Put blogs down here</p>
       </div>
     </main>
   );

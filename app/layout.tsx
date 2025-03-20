@@ -4,7 +4,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-// import { SpeedInsights } from "@vercel/speed-insights/next"
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Link from 'next/link'
+
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body>{children}</body>
-      {/*<body className={inter.className}>{children}</body>*/}
+    <body>
+    {children}
       <Analytics/>
       <SpeedInsights/>
-            <GoogleTagManager gtmId="G-B6CZTMZ81K"/>
+      <GoogleTagManager gtmId="G-B6CZTMZ81K"/>
+    </body>
+      {/*<body className={inter.className}>{children}</body>*/}
     </html>
   );
 }

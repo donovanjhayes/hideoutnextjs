@@ -590,10 +590,10 @@
   dependencies:
     fast-glob "3.3.1"
 
-"@next/mdx@^15.0.3":
-  version "15.0.3"
-  resolved "https://registry.npmjs.org/@next/mdx/-/mdx-15.0.3.tgz"
-  integrity sha512-EwCJKDeJqfbHbsS7rIdWpKDOZsOPsif9AX4PaIhy5ghSMsZvi+/vIZVc07pZT7BdwCIoL9XM1KZMd/vzxCxF5A==
+"@next/mdx@^15.1.7":
+  version "15.1.7"
+  resolved "https://registry.npmjs.org/@next/mdx/-/mdx-15.1.7.tgz"
+  integrity sha512-olVOjKA1K8b7/cu0zqWecVkwyCUnB9xlKXxB/CeCRoZYlH0zluLHwhWBX0PR9yf3CG7eNLrK+PfuPBF+LdWODQ==
   dependencies:
     source-map "^0.7.0"
 
@@ -971,7 +971,7 @@
   resolved "https://registry.npmjs.org/@types/ms/-/ms-0.7.34.tgz"
   integrity sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==
 
-"@types/node@>=13.7.0", "@types/node@22.8.6":
+"@types/node@^22.8.6", "@types/node@>=13.7.0":
   version "22.8.6"
   resolved "https://registry.npmjs.org/@types/node/-/node-22.8.6.tgz"
   integrity sha512-tosuJYKrIqjQIlVCM4PEGxOmyg3FCPa/fViuJChnGeEIhjA46oy8FMVoF9su1/v8PNs2a8Q0iFNyOx0uOF91nw==
