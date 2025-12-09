@@ -88,7 +88,8 @@ export default function Home() {
     <div>
         </div>
         <a
-          href="/booking"
+          // href="/booking"
+          href ="https://houfy.com/ls/hideoutvacation"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
@@ -100,8 +101,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            {/*Learn about Next.js in an interactive course with&nbsp;quizzes!*/}
-            Check our calendar for availability and our lowest booking rates.
+            For direct booking, we use Houfy. Check our calendar for availability and our lowest booking rates.
           </p>
         </a>
 
