@@ -1,0 +1,192 @@
+/* app/family/family.module.css */
+
+.container {
+  min-height: 100vh;
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 40px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.feedWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 40px;
+}
+
+/* Auth / Login Card Styles */
+.loginCard {
+  max-width: 400px;
+  margin: 100px auto;
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Update Post Card Styles */
+.postCard {
+  background: rgb(106, 167, 227);
+  border-radius: 12px;
+  padding: 40px; /* Generous padding for reading */
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.postHeader {
+  border-bottom: 1px solid #2450a9;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.postTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 10px 0;
+}
+
+.postDate {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Styling the Markdown Content specifically */
+.markdownContent {
+  color: #374151;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* app/family/family.module.css */
+
+/* ... keep your container/card styles at the top ... */
+
+/* --- FORCE MARKDOWN STYLING --- */
+/* We target standard HTML tags inside the .markdownContent div */
+
+.markdownContent {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Fix Headers being too small */
+.markdownContent h1 {
+  font-size: 1.75em;
+  font-weight: 800;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb; /* Adds a nice underline to main headers */
+  padding-bottom: 0.3em;
+}
+
+.markdownContent h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #1f2937;
+}
+
+.markdownContent h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+/* Fix Lists not showing bullets/numbers */
+.markdownContent ul {
+  list-style-type: disc; /* Force round bullets */
+  padding-left: 1.5rem;  /* Indent the list */
+  margin-bottom: 1rem;
+}
+
+.markdownContent ol {
+  list-style-type: decimal; /* Force numbers */
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdownContent li {
+  margin-bottom: 0.25rem;
+}
+
+/* Fix Paragraph spacing */
+.markdownContent p {
+  margin-bottom: 1rem;
+}
+
+/* Fix Links */
+.markdownContent a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Fix Blockquotes */
+.markdownContent blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #4b5563;
+  margin: 1.5rem 0;
+}
+
+/* Fix Images */
+.markdownContent img {
+  border-radius: 8px;
+  max-width: 100%; /* Prevents images from overflowing */
+  height: auto;
+  margin: 1.5rem 0;
+  display: block;
+}
+
+.markdownContent h1, .markdownContent h2, .markdownContent h3 {
+  color: #111827;
+  margin-top: 1.5em;
+}
+
+.markdownContent ul {
+  padding-left: 20px;
+}
+
+.markdownContent img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+}
