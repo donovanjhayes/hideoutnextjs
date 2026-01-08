@@ -4,8 +4,10 @@ import { useEffect, useState, FormEvent } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { Database } from '../types/supabase'; // Import the type definition we made earlier
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import Cookies from 'js-cookie';
 import styles from './updates.module.css';
+
 
 // Define what a single row looks like based on our Database type
 type UpdateRow = Database['public']['Tables']['updates']['Row'];
@@ -89,7 +91,7 @@ export default function FamilyPage() {
   return (
     <div className={styles.container}>
       <div className={styles.feedWrapper}>
-        <h1 className={styles.pageTitle}>Monthly Updates</h1>
+        <h1 className={styles.pageTitle}>Broconos Monthly Updates</h1>
         
         {loading && <p style={{textAlign: 'center'}}>Loading updates...</p>}
 
@@ -111,7 +113,9 @@ export default function FamilyPage() {
             </header>
             
             <div className={styles.markdownContent}>
-              <ReactMarkdown>{update.content}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}> 
+              {update.content}
+              </ReactMarkdown>
             </div>
           </article>
         ))}
@@ -119,3 +123,5 @@ export default function FamilyPage() {
     </div>
   );
 }
+
+export const runtime = "edge";
