@@ -77,24 +77,28 @@ const Home = () => {
             </a>
             </div>*/}
 
-<div>
-        <p>
-        1054 Chalet calendar shown below </p>
-</div>
+
         </div>
       </div>
       <br />
       <div>
-        <div className="flex flex-col items-center">
-                <iframe height = "300px"
-                  src="https://login.smoobu.com/en/cockpit/widget/show-calendar-iframe/1033732/c22875e49828e2655f7ba23da50b88125546858782c62311d23cc76f6c464810"
-                  loading="lazy"
-                ></iframe>
-        </div>
 
 
       </div>
-
+            <div>
+                <h2 style={{ color: 'black' }}>
+                    1054 Chalet Calendar
+                </h2>
+                {/* <h2>
+                    Check availability here
+                </h2> */}
+                <iframe width="560"
+                        height="315"
+                        src=
+"https://calendar.google.com/calendar/embed?src=b6880dcae5bede6bae1595deb33b3c57cdca602917225e1155d62153eeba476f%40group.calendar.google.com&ctz=America%2FNew_York"
+                        title="GeeksforGeeks" >
+                </iframe>
+            </div>
 
 
     </main>
