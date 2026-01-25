@@ -87,41 +87,70 @@ export default function FamilyPage() {
     );
   }
 
-  // --- RENDER: UPDATE FEED ---
+  // --- RENDER: MAIN LAYOUT ---
   return (
     <div className={styles.container}>
-      <div className={styles.feedWrapper}>
-        <h1 className={styles.pageTitle}>Broconos Monthly Updates</h1>
+      
+      {/* Page Title */}
+      <h1 style={{textAlign:'center', marginBottom:'40px', fontSize:'2.5rem', fontWeight:'800', color:'#111827'}}>
+        Monthly Updates
+      </h1>
+
+      <div className={styles.contentLayout}>
         
-        {loading && <p style={{textAlign: 'center'}}>Loading updates...</p>}
+        {/* LEFT SIDEBAR */}
+        <aside className={styles.sidebar}>
+          <div className={styles.sidebarTitle}>2026 Updates</div>
+          {updates.length === 0 && <p style={{fontSize:'0.9rem', color:'#666'}}>No updates yet.</p>}
+          
+          <nav>
+            {updates.map((update) => (
+              <a 
+                key={update.id} 
+                href={`#post-${update.id}`} 
+                className={styles.sidebarLink}
+              >
+                {/* Display Title and Month */}
+                <div>{update.title}</div>
+                <div style={{fontSize: '0.75rem', color:'#9ca3af'}}>
+                  {new Date(update.created_at).toLocaleDateString(undefined, {month:'short', year:'numeric'})}
+                </div>
+              </a>
+            ))}
+          </nav>
+        </aside>
 
-        {!loading && updates.length === 0 && (
-          <p style={{textAlign: 'center', color: '#666'}}>No updates found yet.</p>
-        )}
+        {/* RIGHT FEED */}
+        <main className={styles.feedWrapper}>
+          {loading && <p>Loading updates...</p>}
 
-        {updates.map((update) => (
-          <article key={update.id} className={styles.postCard}>
-            <header className={styles.postHeader}>
-              <h2 className={styles.postTitle}>{update.title}</h2>
-              <time className={styles.postDate}>
-                {new Date(update.created_at).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </time>
-            </header>
-            
-            <div className={styles.markdownContent}>
+          {updates.map((update) => (
+            <article 
+              key={update.id} 
+              id={`post-${update.id}`} // <--- This ID allows the link to jump here
+              className={styles.postCard}
+            >
+              <header className={styles.postHeader}>
+                <h2 className={styles.postTitle}>{update.title}</h2>
+                <time className={styles.postDate}>
+                  {new Date(update.created_at).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+              </header>
+              
+              <div className={styles.markdownContent}>
               <ReactMarkdown remarkPlugins={[remarkGfm]}> 
               {update.content}
               </ReactMarkdown>
-            </div>
-          </article>
-        ))}
+              </div>
+            </article>
+          ))}
+        </main>
+
       </div>
     </div>
   );
 }
-
-export const runtime = "edge";

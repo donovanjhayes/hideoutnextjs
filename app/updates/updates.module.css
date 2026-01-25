@@ -7,6 +7,60 @@
   font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* NEW: The layout wrapper that holds Sidebar + Feed */
+.contentLayout {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start; /* Important for sticky sidebar */
+}
+
+/* NEW: The Sidebar Styling */
+.sidebar {
+  width: 280px;
+  flex-shrink: 0; /* Prevents sidebar from getting squished */
+  position: sticky; /* Makes it stay put while scrolling */
+  top: 40px; /* Distance from top of window */
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-height: 80vh; /* Limits height if you have 100 updates */
+  overflow-y: auto; /* Adds scrollbar inside sidebar if needed */
+}
+
+.sidebarTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.sidebarLink {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #4b5563;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.sidebarLink:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+/* The Feed (Right side) */
+.feedWrapper {
+  flex: 1; /* Takes up remaining space */
+  min-width: 0; /* Prevents overflow issues */
+}
+
 .feedWrapper {
   max-width: 800px;
   margin: 0 auto;
@@ -62,6 +116,7 @@
   padding: 40px; /* Generous padding for reading */
   margin-bottom: 40px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  scroll-margin-top: 40px;
 }
 
 .postHeader {
@@ -190,3 +245,48 @@
   border-radius: 8px;
   margin: 20px 0;
 }
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .contentLayout {
+    flex-direction: column; /* Stack them on mobile */
+  }
+  .sidebar {
+    width: 100%;
+    position: relative; /* Stop sticking on mobile */
+    top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* ... existing markdown styles ... */
+
+/* TABLE STYLING */
+.markdownContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  overflow-x: auto; /* Allows scrolling on small screens */
+  display: block;   /* Needed for overflow to work */
+}
+
+/* Table Header */
+.markdownContent th {
+  background-color: #f3f4f6;
+  font-weight: 700;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+}
+
+/* Table Cells */
+.markdownContent td {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+}
+
+/* Zebra Striping (Optional: makes rows easier to read) */
+/* .markdownContent tr:nth-child(even) {
+  background-color: #f9fafb;
+} */
