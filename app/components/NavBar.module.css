@@ -1,0 +1,48 @@
+/* components/NavBar.module.css */
+
+.navContainer {
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; /* Centers the buttons */
+  position: sticky;
+  top: 0;
+  z-index: 50; /* Ensures it floats above content */
+}
+
+.navList {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 20px; /* Pill shape */
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  background-color: transparent;
+}
+
+.navLink:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* This class is for the "Active" state (the page you are currently on) */
+.active {
+  background-color: #2563eb; /* Professional Blue */
+  color: white;
+}
+
+.active:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+  color: white;
+}

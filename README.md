@@ -1,11 +1,14 @@
 
 
-## To Do List for Updates page
+## To Do List for Updates page (as of 2.6.26)
 
 [x] Make the admin and updates page
-[ ] Sidebar navigation
-[ ] add links to the sidebar for "quick access" to FAQs like pin, financials, etc.
-[ ] Connect a supabase table that has the reserve entries, and render that in the financials
+[x] Sidebar navigation
+[x] add links to the sidebar for "quick access" to FAQs like pin, financials, etc.
+[ ] make login page same as attendU - sign up user broconos@gmail.com,
+[ ] turn on RLS from supa
+[ ] set up Tabulator https://tabulator.info/ 
+[x] Connect a supabase table that has the reserve entries
 
 
 ## To Do List for Main page

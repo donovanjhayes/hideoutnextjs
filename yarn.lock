@@ -187,6 +187,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/types@npm:^7.28.2":
+  version: 7.29.0
+  resolution: "@babel/types@npm:7.29.0"
+  dependencies:
+    "@babel/helper-string-parser": "npm:^7.27.1"
+    "@babel/helper-validator-identifier": "npm:^7.28.5"
+  checksum: 10c0/23cc3466e83bcbfab8b9bd0edaafdb5d4efdb88b82b3be6728bbade5ba2f0996f84f63b1c5f7a8c0d67efded28300898a5f930b171bb40b311bca2029c4e9b4f
+  languageName: node
+  linkType: hard
+
 "@cloudflare/next-on-pages@npm:^1.13.16":
   version: 1.13.16
   resolution: "@cloudflare/next-on-pages@npm:1.13.16"
@@ -1225,6 +1235,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/babel__traverse@npm:^7.17.1":
+  version: 7.28.0
+  resolution: "@types/babel__traverse@npm:7.28.0"
+  dependencies:
+    "@babel/types": "npm:^7.28.2"
+  checksum: 10c0/b52d7d4e8fc6a9018fe7361c4062c1c190f5778cf2466817cb9ed19d69fbbb54f9a85ffedeb748ed8062d2cf7d4cc088ee739848f47c57740de1c48cbf0d0994
+  languageName: node
+  linkType: hard
+
 "@types/debug@npm:^4.0.0":
   version: 4.1.12
   resolution: "@types/debug@npm:4.1.12"
@@ -1332,6 +1351,24 @@ __metadata:
   peerDependencies:
     "@types/react": ^18.0.0
   checksum: 10c0/8bd309e2c3d1604a28a736a24f96cbadf6c05d5288cfef8883b74f4054c961b6b3a5e997fd5686e492be903c8f3380dba5ec017eff3906b1256529cd2d39603e
+  languageName: node
+  linkType: hard
+
+"@types/react-tag-autocomplete@npm:^5.6.0":
+  version: 5.12.6
+  resolution: "@types/react-tag-autocomplete@npm:5.12.6"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10c0/26f33a59513c5ab7c47c2eb364e15450f8eb33808ee5f055ccb830ac266b2112a8047a464669164dab9eb1f96ef03f19091dbb4b87b5416e872eed3f292068bb
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*":
+  version: 19.2.13
+  resolution: "@types/react@npm:19.2.13"
+  dependencies:
+    csstype: "npm:^3.2.2"
+  checksum: 10c0/e512dc53b805b9066f5c6ad42944372e1204290d618dbaec634d8bbd80d3aadcc1b8cdd7251329936bbdafae0425c02f531083213473bb370df903f20bb66e91
   languageName: node
   linkType: hard
 
@@ -2350,6 +2387,13 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 10c0/b6416aaff1f380bf56c3b552f31fdf7a69b45689368deca72d28636f41c16bb28ec3ebc40ace97db4c1afc0ceeb8120e8492fe0046841c94c2933b2e30a7d5ac
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.3.1":
+  version: 16.6.1
+  resolution: "dotenv@npm:16.6.1"
+  checksum: 10c0/15ce56608326ea0d1d9414a5c8ee6dcf0fffc79d2c16422b4ac2268e7e2d76ff5a572d37ffe747c377de12005f14b3cc22361e79fc7f1061cce81f77d2c973dc
   languageName: node
   linkType: hard
 
@@ -3677,6 +3721,7 @@ __metadata:
     react: "npm:19.2.1"
     react-dom: "npm:19.2.1"
     react-markdown: "npm:^10.1.0"
+    react-tabulator: "npm:^0.21.0"
     remark-gfm: "npm:^4.0.1"
     tailwindcss: "npm:^4.1.17"
     to-vfile: "npm:^8.0.0"
@@ -3686,6 +3731,13 @@ __metadata:
     yarn: "npm:^1.22.22"
   languageName: unknown
   linkType: soft
+
+"html-attributes@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "html-attributes@npm:1.1.0"
+  checksum: 10c0/fc262104088e1c256ad63972c75cea9e8e0cf3b8f6598f0a1797c57dcc26767184d1dfc2b9543c4d940fbb237e4dbece96cf8c44cdb732462c67fbb0c940c13d
+  languageName: node
+  linkType: hard
 
 "html-url-attributes@npm:^3.0.0":
   version: 3.0.1
@@ -4374,6 +4426,13 @@ __metadata:
   dependencies:
     p-locate: "npm:^5.0.0"
   checksum: 10c0/d3972ab70dfe58ce620e64265f90162d247e87159b6126b01314dd67be43d50e96a50b517bce2d9452a79409c7614054c277b5232377de50416564a77ac7aad3
+  languageName: node
+  linkType: hard
+
+"lodash.isplainobject@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "lodash.isplainobject@npm:4.0.6"
+  checksum: 10c0/afd70b5c450d1e09f32a737bed06ff85b873ecd3d3d3400458725283e3f2e0bb6bf48e67dbe7a309eb371a822b16a26cca4a63c8c52db3fc7dc9d5f9dd324cbb
   languageName: node
   linkType: hard
 
@@ -5631,6 +5690,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pick-react-known-prop@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "pick-react-known-prop@npm:0.1.5"
+  dependencies:
+    html-attributes: "npm:^1.1.0"
+    lodash.isplainobject: "npm:^4.0.6"
+    svg-attributes: "npm:^1.0.0"
+  checksum: 10c0/44ad6c56f32e9fcaf938ec42ca621746b902dd7c31c68a85d3b27f138c8e54fe1db39830a1c3ce162028467da262b6556560321ba9c51cc0b816324311425afc
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^1.0.0, picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
@@ -5781,6 +5851,34 @@ __metadata:
     "@types/react": ">=18"
     react: ">=18"
   checksum: 10c0/4a5dc7d15ca6d05e9ee95318c1904f83b111a76f7588c44f50f1d54d4c97193b84e4f64c4b592057c989228238a2590306cedd0c4d398e75da49262b2b5ae1bf
+  languageName: node
+  linkType: hard
+
+"react-tabulator@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "react-tabulator@npm:0.21.0"
+  dependencies:
+    "@types/babel__traverse": "npm:^7.17.1"
+    "@types/react-tag-autocomplete": "npm:^5.6.0"
+    dotenv: "npm:^16.3.1"
+    pick-react-known-prop: "npm:^0.1.5"
+    react-tag-autocomplete: "npm:^5.7.1"
+    tabulator-tables: "npm:5.6.1"
+  peerDependencies:
+    react: ">=15.6.2 || ^16.0.0 || ^17.0.0"
+    react-dom: ">=15.6.2 || ^16.0.0 || ^17.0.0"
+  checksum: 10c0/8ed5893414ad9ba5132c99b581dc2c7b65fa2b15f129cbcea66bbdfa6a5aa8d21f363641b4335a6c3a3ad4df0ba7b0f9bc998903f1039bca89aca2e74d4e3fb3
+  languageName: node
+  linkType: hard
+
+"react-tag-autocomplete@npm:^5.7.1":
+  version: 5.13.1
+  resolution: "react-tag-autocomplete@npm:5.13.1"
+  peerDependencies:
+    prop-types: ^15.0.0
+    react: ^15.0.0 || ^16.0.0
+    react-dom: ^15.0.0 || ^16.0.0
+  checksum: 10c0/67400d408cfbc8dc2e0f9ec63bdbd262ae27ff0fcc0877c89209d4b0ede8e2959a649132f5b95309677d1c43aa00672d6d67ed049a1c4b117201bd381945ad4f
   languageName: node
   linkType: hard
 
@@ -6557,6 +6655,20 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 10c0/6c4032340701a9950865f7ae8ef38578d8d7053f5e10518076e6554a9381fa91bd9c6850193695c141f32b21f979c985db07265a758867bac95de05f7d8aeb39
+  languageName: node
+  linkType: hard
+
+"svg-attributes@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "svg-attributes@npm:1.0.0"
+  checksum: 10c0/3d2ca022826b71798744b301aca6a5f7b463deed5a3b608be2c0cf7cca63e80e1e064fda54ee458a00a4b23abaa4a3dda9f22ce7284b09ac8700929c9e4124d5
+  languageName: node
+  linkType: hard
+
+"tabulator-tables@npm:5.6.1":
+  version: 5.6.1
+  resolution: "tabulator-tables@npm:5.6.1"
+  checksum: 10c0/69b6d564b26c14bc77825b141778c780544b0f54bb07e13ebed133d27ee0d56a71e291437a6786452f51c940e516e667fdcec3d3f20d1a31dafc6120ebdc1043
   languageName: node
   linkType: hard
 

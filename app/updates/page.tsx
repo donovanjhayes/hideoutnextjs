@@ -7,6 +7,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Cookies from 'js-cookie';
 import styles from './updates.module.css';
+import NavBar from '../components/NavBar';
+import AuthGuard from '../components/AuthGuard';
 
 
 // Define what a single row looks like based on our Database type
@@ -89,6 +91,10 @@ export default function FamilyPage() {
 
   // --- RENDER: MAIN LAYOUT ---
   return (
+          <>
+    {/* ADD THE NAV BAR HERE */}
+    <AuthGuard>
+    <NavBar />
     <div className={styles.container}>
       
       {/* Page Title */}
@@ -152,5 +158,7 @@ export default function FamilyPage() {
 
       </div>
     </div>
+    </AuthGuard>
+    </>
   );
 }
