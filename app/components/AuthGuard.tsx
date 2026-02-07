@@ -48,6 +48,7 @@ export default function AuthGuard({ children }: { children: ReactNode }) {
       <div className={styles.container}>
         <div className={styles.card}>
           <h1 className={styles.title}>Broconos Update Portal Login</h1>
+          <h2>Use broconos1054@gmail.com for username</h2><br></br>
           <form onSubmit={handleLogin}>
             <input
               className={styles.input}

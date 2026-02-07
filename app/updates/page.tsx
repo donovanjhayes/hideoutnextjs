@@ -10,40 +10,28 @@ import styles from './updates.module.css';
 import NavBar from '../components/NavBar';
 import AuthGuard from '../components/AuthGuard';
 
-
 // Define what a single row looks like based on our Database type
 type UpdateRow = Database['public']['Tables']['updates']['Row'];
 
-export default function FamilyPage() {
+export default function UpdatesPage() {
+  // logic only for data fetching now! No more password logic.
   const [updates, setUpdates] = useState<UpdateRow[]>([]);
-  const [password, setPassword] = useState<string>('');
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true); // Added loading state for initial fetch
+  const [loading, setLoading] = useState<boolean>(true);
 
-  // --- LOGIC ---
 
-  const handleLogin = (e: FormEvent) => {
-    e.preventDefault();
-    const secretPass = process.env.NEXT_PUBLIC_FAMILY_PASSWORD;
-
-    if (password === secretPass) {
-      Cookies.set('family_auth', 'true', { expires: 7 });
-      setIsLoggedIn(true);
-      fetchUpdates();
-    } else {
-      alert('Wrong password!');
+useEffect(() => {
+    async function fetchUpdates() {
+      const { data } = await supabase
+        .from('updates')
+        .select('*')
+        .order('created_at', { ascending: false });
+      
+      if (data) setUpdates(data);
+      setLoading(false);
     }
-  };
-
-  useEffect(() => {
-    const auth = Cookies.get('family_auth');
-    if (auth === 'true') {
-      setIsLoggedIn(true);
-      fetchUpdates();
-    } else {
-      setLoading(false); // Stop loading if not logged in so we show the login form
-    }
+    fetchUpdates();
   }, []);
+
 
   async function fetchUpdates() {
     setLoading(true);
@@ -63,31 +51,6 @@ export default function FamilyPage() {
     setLoading(false);
   }
 
-  // --- RENDER: LOGIN SCREEN ---
-  if (!isLoggedIn) {
-    if (loading) return null; // Avoid flashing login screen if checking cookies
-
-    return (
-      <div className={styles.container}>
-        <div className={styles.loginCard}>
-          <h1 style={{marginBottom: '20px'}}>Family Portal</h1>
-          <p style={{color: '#666', marginBottom: '20px'}}>
-            Please enter the family password to view updates.
-          </p>
-          <form onSubmit={handleLogin}>
-            <input 
-              type="password" 
-              className={styles.input}
-              placeholder="Password" 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit" className={styles.button}>Enter</button>
-          </form>
-        </div>
-      </div>
-    );
-  }
 
   // --- RENDER: MAIN LAYOUT ---
   return (
