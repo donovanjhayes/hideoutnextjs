@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, ReactNode } from 'react';
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../lib/supabaseClient'; // Import supabase
 import { Session } from '@supabase/supabase-js';
 import styles from './AuthGuard.module.css'; // We will make this style next
 

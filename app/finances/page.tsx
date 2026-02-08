@@ -1,9 +1,8 @@
 'use client';
 
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/NavBar';
 import styles from '../updates/updates.module.css'; // Re-using your existing styles!
-import AuthGuard from '../components/AuthGuard';
-import FinanceTable from '../components/FinanceTable';
+import AuthGuard from '../../components/AuthGuard';
 
 
 

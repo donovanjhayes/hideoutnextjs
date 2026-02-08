@@ -1,6 +1,6 @@
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/NavBar';
 import styles from '../updates/updates.module.css';
-import AuthGuard from '../components/AuthGuard'; //
+import AuthGuard from '../../components/AuthGuard'; //
 
 export default function InfoPage() {
   return (

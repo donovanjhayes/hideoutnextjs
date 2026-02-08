@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useState, FormEvent } from 'react';
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../../lib/supabaseClient';
 import { Database } from '../types/supabase'; // Import the type definition we made earlier
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Cookies from 'js-cookie';
 import styles from './updates.module.css';
-import NavBar from '../components/NavBar';
-import AuthGuard from '../components/AuthGuard';
+import NavBar from '../../components/NavBar';
+import AuthGuard from '../../components/AuthGuard';
 
 // Define what a single row looks like based on our Database type
 type UpdateRow = Database['public']['Tables']['updates']['Row'];

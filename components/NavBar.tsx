@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './NavBar.module.css';
-import { supabase } from '../lib/supabaseClient'; // Import supabase
+import { supabase } from '../lib/supabaseClient' // Import supabase
 import { useRouter } from 'next/navigation';
 
 export default function NavBar() {
