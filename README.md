@@ -5,10 +5,17 @@
 [x] Make the admin and updates page
 [x] Sidebar navigation
 [x] add links to the sidebar for "quick access" to FAQs like pin, financials, etc.
-[ ] make login page same as attendU - sign up user broconos@gmail.com,
-[ ] turn on RLS from supa
-[ ] set up Tabulator https://tabulator.info/ 
+[x] turn on RLS from supa
 [x] Connect a supabase table that has the reserve entries
+[ ] use shadcn Table https://ui.shadcn.com/docs/components/radix/table 
+    - filter data out to 2 different tables, use {columns} to pull separately
+
+
+## Less important
+[ ] make login autofill username, user just types password
+
+
+
 
 
 ## To Do List for Main page

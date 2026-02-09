@@ -3,8 +3,19 @@
 import NavBar from '../../components/NavBar';
 import styles from '../updates/updates.module.css'; // Re-using your existing styles!
 import AuthGuard from '../../components/AuthGuard';
+import Tablechalet from '@/components/Tablechalet'; 
 
 
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+import Tabledaybreak from '@/components/Tabledaybreak';
 
 const columns = [
   { title: "Name", field: "name", width: 15 },
@@ -36,11 +47,9 @@ export default function FinancesPage() {
             <p>Financial reports and spreadsheets will go here.</p>
           </div>
           <div>
-  {/* <ReactTabulator
-  data={data}
-  columns={columns}
-  layout={"fitData"}
-  /> */}
+<div> <Tablechalet /></div>
+<div>  <Tabledaybreak /> </div>
+
 {/* <FinanceTable /> */}
   </div>
         </div>
