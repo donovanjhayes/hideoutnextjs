@@ -29,6 +29,10 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   box-sizing: border-box; /* Fixes padding issues */
+  /* --- ADD THESE LINES --- */
+  color: #111827;       /* Forces text to be Dark Gray/Black */
+  background-color: #ffffff; /* Forces background to be White */
+  /* ----------------------- */
 }
 
 .button {
