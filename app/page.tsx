@@ -15,6 +15,17 @@ import bedroom from "../public/bedroom.jpg";
 
 // // initTWE({ Carousel });
 
+export const metadata: Metadata = {
+  title: 'Poconos Family Getaway | Hideout Vacation Rental in PA',
+  description: 'Experience the ultimate Poconos getaway. A spacious, family-friendly vacation rental close to skiing, swimming, and lakes. Book your stay today.',
+  keywords: ['Poconos', 'Getaway', 'Vacation Rental', 'Pennsylvania', 'Skiing', 'Family Reunion', 'Hideout'],
+  openGraph: {
+    title: 'Poconos Family Getaway',
+    description: 'The perfect spot for your next family vacation.',
+    images: ['/hero-image.png'], // Make sure you have an image in your public folder
+  },
+};
+
 export default function Home() {
 //   const imageStyle = {
 //   borderRadius: '8px',
