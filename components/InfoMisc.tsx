@@ -3,7 +3,7 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { Database } from '../app/types/supabase';
-import styles from './FinanceTable.module.css'; // We'll make this simple CSS next
+import styles from './InfoTable.module.css'; // We'll make this simple CSS next
 
 
 type FinanceRow = Database['public']['Tables']['info_misc']['Row'];

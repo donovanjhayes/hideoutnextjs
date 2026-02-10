@@ -11,9 +11,8 @@ export default function InfoPage() {
         <div className={styles.feedWrapper}>
           <h1 className={styles.pageTitle}>Information</h1>
           <div className={styles.postCard}>
-            <p>House rules, wifi passwords, and instructions will go here.</p>
-          </div>
-          <div> <InfoMisc />  </div>
+            {/* <p>House rules, wifi passwords, and instructions will go here.</p> */}
+             <InfoMisc />  </div>
         </div>
       </div>
     </AuthGuard>
