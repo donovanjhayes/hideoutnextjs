@@ -74,6 +74,8 @@
   margin-bottom: 40px;
 }
 
+
+
 /* Auth / Login Card Styles */
 .loginCard {
   max-width: 400px;
@@ -205,6 +207,11 @@
 /* Fix Paragraph spacing */
 .markdownContent p {
   margin-bottom: 1rem;
+}
+
+.a {
+  color: #2563eb;
+  text-decoration: underline;
 }
 
 /* Fix Links */

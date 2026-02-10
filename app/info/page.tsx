@@ -1,6 +1,7 @@
 import NavBar from '../../components/NavBar';
 import styles from '../updates/updates.module.css';
 import AuthGuard from '../../components/AuthGuard'; //
+import InfoMisc from '@/components/InfoMisc';
 
 export default function InfoPage() {
   return (
@@ -12,6 +13,7 @@ export default function InfoPage() {
           <div className={styles.postCard}>
             <p>House rules, wifi passwords, and instructions will go here.</p>
           </div>
+          <div> <InfoMisc />  </div>
         </div>
       </div>
     </AuthGuard>

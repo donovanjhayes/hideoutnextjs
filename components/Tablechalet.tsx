@@ -3,25 +3,10 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { Database } from '../app/types/supabase';
-// import styles from './FinanceTable.module.css'; // We'll make this simple CSS next
+import styles from './FinanceTable.module.css'; // We'll make this simple CSS next
 
-// 1. Define the shape of our data using your existing Supabase types
-// create table public.financials (
-//   "1054 Prev Reserve Balance" text null,
-//   "1054 Inflow" text null,
-//   "1054 Outflow" text null,
-//   "1054 Net In/Outflow" text null,
-//   "1054 Current Reserve Balance" text null,
-//   "1184 Prev Reserve Balance" text null,
-//   "1184 Inflow" text null,
-//   "1184 Outflow" text null,
-//   "1184 Net In/Outflow" text null,
-//   "1184 Current Reserve Balance" text null,
-//   "MONTH" smallint not null,
-//   constraint financials_pkey primary key ("MONTH")
-// ) TABLESPACE pg_default;
 
-type FinanceRow = Database['public']['Tables'];
+type FinanceRow = Database['public']['Tables']['financials']['Row'];
 // Read specific columns
 
 // let { data: financials, error } = await supabase
@@ -39,7 +24,7 @@ export default function FinanceTable() {
       const { data, error } = await supabase
         .from('financials') // Matches your table name in Supabase
         .select('*')
-        .order('date', { ascending: false }); // Newest items at the top
+        .order('month', { ascending: true }); // Oldest items at the top
 
       if (error) {
         console.error('Error fetching finances:', error);
@@ -70,30 +55,34 @@ export default function FinanceTable() {
   return (
     <div className={styles.tableContainer}>
       <table className={styles.table}>
+    <caption className={styles.caption}>
+    1054 Chalet Financials - Monthly Breakdown
+  </caption>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Category</th>
-            <th>Description</th>
-            <th style={{ textAlign: 'right' }}>Amount</th>
+            <th>Month</th>
+            <th>Prev Balance</th>
+            <th>Inflow</th>
+            <th>Outflow</th>
+            <th>Net</th>
+            <th>Current Balance</th>
+            {/* <th style={{ textAlign: 'right' }}>Amount</th> */}
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={row.id}>
-              <td>{new Date(row.date).toLocaleDateString()}</td>
-              <td>
-                <span className={styles.categoryBadge}>{row.category}</span>
-              </td>
-              <td className={styles.description}>{row.description}</td>
-              <td style={{ textAlign: 'right' }}>
-                {formatCurrency(row.amount, row.type)}
-              </td>
+            <tr key={row.month}>
+              <td>{row.month_name}</td>
+              <td className={styles.description}>{row.chalet_prev}</td>
+              <td className={styles.description}>{row.chalet_in}</td>
+              <td className={styles.description}>{row.chalet_out}</td>
+              <td className={styles.description}>{row.chalet_net}</td>
+              <td className={styles.description}>{row.chalet_cur}</td>
             </tr>
           ))}
           {rows.length === 0 && (
             <tr>
-              <td colSpan={4} style={{ textAlign: 'center', padding: '20px' }}>
+              <td colSpan={6} className={styles.noRecords}>
                 No records found. Add some in Supabase!
               </td>
             </tr>

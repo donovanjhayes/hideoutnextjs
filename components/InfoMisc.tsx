@@ -6,12 +6,9 @@ import { Database } from '../app/types/supabase';
 import styles from './FinanceTable.module.css'; // We'll make this simple CSS next
 
 
-type FinanceRow = Database['public']['Tables']['financials']['Row'];
+type FinanceRow = Database['public']['Tables']['info_misc']['Row'];
 // Read specific columns
 
-// let { data: financials, error } = await supabase
-//   .from('financials')
-//   .select('some_column,other_column')
 
 
 export default function FinanceTable() {
@@ -22,9 +19,9 @@ export default function FinanceTable() {
   useEffect(() => {
     async function fetchFinances() {
       const { data, error } = await supabase
-        .from('financials') // Matches your table name in Supabase
+        .from('info_misc') // Matches your table name in Supabase
         .select('*')
-        .order('month', { ascending: true }); // Oldest items at the top
+        .order('id', { ascending: true }); // Oldest items at the top
 
       if (error) {
         console.error('Error fetching finances:', error);
@@ -56,27 +53,21 @@ export default function FinanceTable() {
     <div className={styles.tableContainer}>
       <table className={styles.table}>
     <caption className={styles.caption}>
-    1184 Daybreak Financials - Monthly Breakdown
+    Frequently Used Info
   </caption>
         <thead>
           <tr>
-            <th>Month</th>
-            <th>Prev Balance</th>
-            <th>Inflow</th>
-            <th>Outflow</th>
-            <th>Net</th>
-            <th>Current Balance</th>
+            {/* <th align="right">Item</th> */}
+            <th></th>
+            <th></th>
+            {/* <th>Pin or Password</th> */}
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={row.month}>
-              <td>{row.month_name}</td>
-              <td className={styles.description}>{row.daybreak_prev}</td>
-              <td className={styles.description}>{row.daybreak_in}</td>
-              <td className={styles.description}>{row.daybreak_out}</td>
-              <td className={styles.description}>{row.daybreak_net}</td>
-              <td className={styles.description}>{row.daybreak_cur}</td>
+            <tr key={row.id}>
+            <td align="center">{row.note}</td>
+            <td align="left">{row.values}</td>
             </tr>
           ))}
           {rows.length === 0 && (

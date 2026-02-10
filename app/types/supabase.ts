@@ -41,58 +41,64 @@ export type Database = {
     Tables: {
       financials: {
         Row: {
-          "1054 Current Reserve Balance": string | null
-          "1054 Inflow": string | null
-          "1054 Net In/Outflow": string | null
-          "1054 Outflow": string | null
-          "1054 Prev Reserve Balance": string | null
-          "1184 Current Reserve Balance": string | null
-          "1184 Inflow": string | null
-          "1184 Net In/Outflow": string | null
-          "1184 Outflow": string | null
-          "1184 Prev Reserve Balance": string | null
-          MONTH: number
+          chalet_cur: string | null
+          chalet_in: string | null
+          chalet_net: string | null
+          chalet_out: string | null
+          chalet_prev: string | null
+          daybreak_cur: string | null
+          daybreak_in: string | null
+          daybreak_net: string | null
+          daybreak_out: string | null
+          daybreak_prev: string | null
+          month: number
+          month_name: string | null
         }
         Insert: {
-          "1054 Current Reserve Balance"?: string | null
-          "1054 Inflow"?: string | null
-          "1054 Net In/Outflow"?: string | null
-          "1054 Outflow"?: string | null
-          "1054 Prev Reserve Balance"?: string | null
-          "1184 Current Reserve Balance"?: string | null
-          "1184 Inflow"?: string | null
-          "1184 Net In/Outflow"?: string | null
-          "1184 Outflow"?: string | null
-          "1184 Prev Reserve Balance"?: string | null
-          MONTH: number
+          chalet_cur?: string | null
+          chalet_in?: string | null
+          chalet_net?: string | null
+          chalet_out?: string | null
+          chalet_prev?: string | null
+          daybreak_cur?: string | null
+          daybreak_in?: string | null
+          daybreak_net?: string | null
+          daybreak_out?: string | null
+          daybreak_prev?: string | null
+          month: number
+          month_name?: string | null
         }
         Update: {
-          "1054 Current Reserve Balance"?: string | null
-          "1054 Inflow"?: string | null
-          "1054 Net In/Outflow"?: string | null
-          "1054 Outflow"?: string | null
-          "1054 Prev Reserve Balance"?: string | null
-          "1184 Current Reserve Balance"?: string | null
-          "1184 Inflow"?: string | null
-          "1184 Net In/Outflow"?: string | null
-          "1184 Outflow"?: string | null
-          "1184 Prev Reserve Balance"?: string | null
-          MONTH?: number
+          chalet_cur?: string | null
+          chalet_in?: string | null
+          chalet_net?: string | null
+          chalet_out?: string | null
+          chalet_prev?: string | null
+          daybreak_cur?: string | null
+          daybreak_in?: string | null
+          daybreak_net?: string | null
+          daybreak_out?: string | null
+          daybreak_prev?: string | null
+          month?: number
+          month_name?: string | null
         }
         Relationships: []
       }
-      keepitactive: {
+      info_misc: {
         Row: {
-          created_at: string
           id: number
+          note: string | null
+          values: string | null
         }
         Insert: {
-          created_at?: string
           id?: number
+          note?: string | null
+          values?: string | null
         }
         Update: {
-          created_at?: string
           id?: number
+          note?: string | null
+          values?: string | null
         }
         Relationships: []
       }
