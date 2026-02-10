@@ -6,6 +6,7 @@ import fireplace from "../public/fireplace.jpg";
 // import livingroom from "../public/livingroom.jpg";
 import smores from "../public/smores.jpg";
 import bedroom from "../public/bedroom.jpg";
+import { Metadata } from "next";
 // import React from 'react';
 // Initialization for ES Users
 // import {
