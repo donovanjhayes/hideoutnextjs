@@ -39,6 +39,63 @@ export type Database = {
   }
   public: {
     Tables: {
+      financials: {
+        Row: {
+          "1054 Current Reserve Balance": string | null
+          "1054 Inflow": string | null
+          "1054 Net In/Outflow": string | null
+          "1054 Outflow": string | null
+          "1054 Prev Reserve Balance": string | null
+          "1184 Current Reserve Balance": string | null
+          "1184 Inflow": string | null
+          "1184 Net In/Outflow": string | null
+          "1184 Outflow": string | null
+          "1184 Prev Reserve Balance": string | null
+          MONTH: number
+        }
+        Insert: {
+          "1054 Current Reserve Balance"?: string | null
+          "1054 Inflow"?: string | null
+          "1054 Net In/Outflow"?: string | null
+          "1054 Outflow"?: string | null
+          "1054 Prev Reserve Balance"?: string | null
+          "1184 Current Reserve Balance"?: string | null
+          "1184 Inflow"?: string | null
+          "1184 Net In/Outflow"?: string | null
+          "1184 Outflow"?: string | null
+          "1184 Prev Reserve Balance"?: string | null
+          MONTH: number
+        }
+        Update: {
+          "1054 Current Reserve Balance"?: string | null
+          "1054 Inflow"?: string | null
+          "1054 Net In/Outflow"?: string | null
+          "1054 Outflow"?: string | null
+          "1054 Prev Reserve Balance"?: string | null
+          "1184 Current Reserve Balance"?: string | null
+          "1184 Inflow"?: string | null
+          "1184 Net In/Outflow"?: string | null
+          "1184 Outflow"?: string | null
+          "1184 Prev Reserve Balance"?: string | null
+          MONTH?: number
+        }
+        Relationships: []
+      }
+      keepitactive: {
+        Row: {
+          created_at: string
+          id: number
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+        }
+        Update: {
+          created_at?: string
+          id?: number
+        }
+        Relationships: []
+      }
       updates: {
         Row: {
           content: string
