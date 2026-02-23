@@ -5,37 +5,39 @@ import { supabase } from '../../lib/supabaseClient';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
 import styles from './admin.module.css';
+import AuthGuard from '@/components/AuthGuard';
 
 export default function AdminPage() {
+
   // We explicitly tell useState what kind of data to expect
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  // const [password, setPassword] = useState<string>('');
+  // const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   
   const router = useRouter();
 
   // --- LOGIC ---
 
-  const handleLogin = (e: FormEvent) => {
-    e.preventDefault();
-    // We check if the env variable exists to satisfy TS, though in Next.js it usually does
-    const secretPass = process.env.NEXT_PUBLIC_FAMILY_PASSWORD;
+  // const handleLogin = (e: FormEvent) => {
+  //   e.preventDefault();
+  //   // We check if the env variable exists to satisfy TS, though in Next.js it usually does
+  //   const secretPass = process.env.NEXT_PUBLIC_FAMILY_PASSWORD;
     
-    if (password === secretPass) {
-      Cookies.set('family_auth', 'true', { expires: 7 });
-      setIsLoggedIn(true);
-    } else {
-      alert('Wrong password!');
-    }
-  };
+  //   if (password === secretPass) {
+  //     Cookies.set('family_auth', 'true', { expires: 7 });
+  //     setIsLoggedIn(true);
+  //   } else {
+  //     alert('Wrong password!');
+  //   }
+  // };
 
-  useEffect(() => {
-    if (Cookies.get('family_auth') === 'true') {
-      setIsLoggedIn(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (Cookies.get('family_auth') === 'true') {
+  //     setIsLoggedIn(true);
+  //   }
+  // }, []);
 
   // Type: ChangeEvent<HTMLInputElement> ensures we can access e.target.files
   const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
@@ -72,32 +74,33 @@ export default function AdminPage() {
     }
   };
 
-  // --- RENDER: LOGIN SCREEN ---
-  if (!isLoggedIn) {
-    return (
-      <div className={styles.container}>
-        <div className={styles.card}>
-          <h1 className={styles.title}>Admin Access</h1>
-          <form onSubmit={handleLogin}>
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Password</label>
-              <input 
-                type="password" 
-                className={styles.input}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter admin password"
-              />
-            </div>
-            <button type="submit" className={styles.button}>Login</button>
-          </form>
-        </div>
-      </div>
-    );
-  }
+  // // --- RENDER: LOGIN SCREEN ---
+  // if (!isLoggedIn) {
+  //   return (
+  //     <div className={styles.container}>
+  //       <div className={styles.card}>
+  //         <h1 className={styles.title}>Admin Access</h1>
+  //         <form onSubmit={handleLogin}>
+  //           <div className={styles.formGroup}>
+  //             <label className={styles.label}>Password</label>
+  //             <input 
+  //               type="password" 
+  //               className={styles.input}
+  //               value={password}
+  //               onChange={(e) => setPassword(e.target.value)}
+  //               placeholder="Enter admin password"
+  //             />
+  //           </div>
+  //           <button type="submit" className={styles.button}>Login</button>
+  //         </form>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   // --- RENDER: DASHBOARD SCREEN ---
   return (
+    <AuthGuard>
     <div className={styles.container}>
       <div className={styles.card}>
         <h1 className={styles.title}>New Family Update</h1>
@@ -152,6 +155,7 @@ export default function AdminPage() {
         </form>
       </div>
     </div>
+    </AuthGuard>
   );
 }
 export const runtime = "edge";
