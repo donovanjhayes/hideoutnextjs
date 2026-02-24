@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Property } from '@/types/property';
+import { Property } from '@/app/types/property';
 
 export default function PropertyCard({ property }: { property: Property }) {
   return (
@@ -35,7 +35,7 @@ export default function PropertyCard({ property }: { property: Property }) {
         {/* Action Links */}
         <div className="flex flex-col sm:flex-row gap-4">
           <Link 
-            href={property.links.booking}
+            href={`${property.links.details}#booking-section`}
             className="px-6 py-3 bg-black text-white text-center rounded-lg font-medium hover:bg-gray-800 transition"
           >
             Book Now

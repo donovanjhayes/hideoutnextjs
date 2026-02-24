@@ -7,6 +7,7 @@ export interface Property {
   thumbnails: string[];
   amenities: string[];
   links: {
+    embedbooking: Url;
     details: string;
     gallery: string;
     booking: string;
