@@ -74,3 +74,5 @@ export default async function GalleryPage({ params }: GalleryProps) {
     </main>
   );
 }
+
+export const runtime = 'edge';
