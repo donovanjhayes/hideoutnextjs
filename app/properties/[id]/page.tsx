@@ -108,3 +108,5 @@ export default async function PropertyDetailsPage({ params }: PropertyDetailsPro
     </main>
   );
 }
+
+export const runtime = 'edge';
