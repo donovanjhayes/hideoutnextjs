@@ -1,3 +1,5 @@
+import { Url } from "next/dist/shared/lib/router/router";
+
 export interface Property {
   id: string;
   name: string;
