@@ -21,8 +21,8 @@ export const properties: Property[] = [
     name: 'Daybreak',
     tagline: 'Modern Poconos Getaway',
     description: 'Just across the street from the Chalet, youn/n\'ll find Daybreak, a modern and stylish retreat with sleek design, a private hot tub, and all the comforts you need for a memorable stay in the Poconos.',
-    heroImage: '/images/daybreak/daybreak-outside.jpg',
-    thumbnails: ['/images/daybreak/daybreak-firepit.jpg', '/images/daybreak/daybreak-hall2.jpg', '/images/daybreak/daybreak-kitchen.jpg', '/images/daybreak/daybreak-kitchen.jpeg', '/images/daybreak/daybreak-guestbed.jpg', '/images/daybreak/daybreak-guestbath.jpg', '/images/daybreak/daybreak-mainbath.jpg', '/images/daybreak/daybreakbackporch.jpg'],
+    heroImage: '/images/daybreak/daybreakoutside.jpg',
+    thumbnails: ['/images/daybreak/daybreakfirepit.jpg', '/images/daybreak/daybreakhall2.jpg', '/images/daybreak/daybreakkitchen.jpg', '/images/daybreak/daybreakkitchen.jpeg', '/images/daybreak/daybreakguestbed.jpg', '/images/daybreak/daybreakguestbath.jpg', '/images/daybreak/daybreakmainbath.jpg', '/images/daybreak/daybreakbackporch.jpg'],
     amenities: ['Hot Tub', 'Fast Wi-Fi', 'Pet Friendly', 'Fireplace', 'Washer/Dryer'],
     links: {
       details: '/properties/hideout-daybreak/',
