@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+// Make sure Footer is capitalized
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
