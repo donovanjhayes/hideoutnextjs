@@ -1,6 +1,7 @@
 import PropertyCard from '@/components/PropertyCard';
 import { properties } from '@/data/properties';
 import { Metadata } from "next";
+import Footer from '@/components/Footer';
 
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

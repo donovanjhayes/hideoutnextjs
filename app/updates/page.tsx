@@ -9,6 +9,7 @@ import Cookies from 'js-cookie';
 import styles from './updates.module.css';
 import NavBar from '../../components/NavBar';
 import AuthGuard from '../../components/AuthGuard';
+import Footerfam from '@/components/Footerfam';
 
 // Define what a single row looks like based on our Database type
 type UpdateRow = Database['public']['Tables']['updates']['Row'];
@@ -121,6 +122,7 @@ useEffect(() => {
 
       </div>
     </div>
+    <Footerfam />
     </AuthGuard>
     </>
   );
