@@ -20,7 +20,7 @@ export const properties: Property[] = [
     id: 'hideout-daybreak',
     name: 'Daybreak',
     tagline: 'Modern Poconos Getaway',
-    description: 'Just across the street from the Chalet, youn/n\'ll find Daybreak, a modern and stylish retreat with sleek design, a private hot tub, and all the comforts you need for a memorable stay in the Poconos.',
+    description: 'Just across the street from the Chalet, you\'ll find Daybreak, a modern and stylish retreat with sleek design, a private hot tub, and all the comforts you need for a memorable stay in the Poconos.',
     heroImage: '/images/daybreak/aprilphotos/daybreakoutside.jpg',
     thumbnails: ['/images/daybreak/daybreakfirepit.jpg', 
       '/images/daybreak/daybreakhall2.jpg', 
@@ -50,7 +50,7 @@ export const properties: Property[] = [
     {
     id: 'hideout-retreat',
     name: 'Retreats in the Hideout',
-    tagline: 'Book your own or let us host your group/n\'sl getaway',
+    tagline: 'Book your own or let us host your group\'s getaway',
     description: 'We can accommodate groups as large as 25... contact us directly for more information! You can contact us through the direct booking engine, or you can send us an email directly at retreats@hideoutvacation.com',
     heroImage: '/images/hideout-northbeach.jpg',
     thumbnails: ['/images/retreat/breakfast.jpeg', '/images/retreat/morebreakfast.jpeg', '/images/retreat/writinglight.jpeg'],
