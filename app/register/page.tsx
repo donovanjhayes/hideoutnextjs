@@ -1,51 +1,55 @@
+'use client';
+
+import { useEffect } from 'react';
+import Script from 'next/script';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
-export default function MapPage() {
+export default function RegisterPage() {
+  // This tells Tally to render the form whenever this page loads
+  useEffect(() => {
+    // We check if the window exists to prevent server-side rendering crashes
+    if (typeof window !== 'undefined' && (window as any).Tally) {
+      (window as any).Tally.loadEmbeds();
+    }
+  }, []);
+
   return (
     <main className="min-h-screen bg-stone-100 flex flex-col">
       {/* Top Navigation */}
-      <nav className="bg-stone-50 px-6 py-4 flex items-center justify-between border-b border-stone-200">
+      {/* <nav className="bg-stone-50 px-6 py-4 flex items-center justify-between border-b border-stone-200">
         <Link href="/" className="text-stone-600 hover:text-stone-900 font-medium transition flex items-center gap-2">
-          ← Back to All Properties
+          ← Back to Home
         </Link>
-      </nav>
+      </nav> */}
 
-      {/* Main Content Area - flex-grow pushes the footer to the bottom */}
-      <section className="flex-grow max-w-7xl mx-auto w-full px-6 py-12 flex flex-col items-center">
+      {/* Main Content Area */}
+      <section className="flex-grow max-w-4xl mx-auto w-full px-6 py-12 flex flex-col items-center">
         
-        {/* Header Title */}
-        <div className="w-full text-center mb-8">
-          <h1 className="text-4xl font-extrabold text-stone-900 mb-2">Property Map</h1>
-          <p className="text-lg text-stone-600">Explore the grounds and local trails.</p>
-        </div>
+        {/* <div className="w-full text-center mb-8">
+          <h1 className="text-4xl font-extrabold text-stone-900 mb-2">Hideout Guests</h1>
+        </div> */}
 
-        {/* Action Button for Mobile Users (or anyone who prefers to download) */}
-        <div className="w-full flex justify-end mb-4">
-          <a 
-            href="/hideoutmap.pdf" 
-            download 
-            className="px-6 py-2 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-800 transition shadow-sm"
-          >
-            Download Map
-          </a>
-        </div>
+        <div className="w-full bg-white rounded-2xl border border-stone-200 shadow-lg p-4 md:p-8">
+          
+          {/* The Next.js way to load external scripts safely */}
+          <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
 
-        {/* The PDF Viewer Container */}
-        <div className="w-full h-[75vh] min-h-[600px] bg-stone-200 rounded-2xl border border-stone-300 shadow-lg overflow-hidden">
-          {/* By setting src="/map.pdf", Next.js automatically looks in the public folder.
-            The iframe will use the browser's native PDF viewer.
-          */}
+          {/* The React-compliant Tally Iframe */}
           <iframe 
-            src="/hideoutmap.pdf" 
-            className="w-full h-full border-none" 
-            title="Hideout Vacation Grounds Map"
-          />
-        </div>
+            data-tally-src="https://tally.so/embed/0V7eWj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+            loading="lazy" 
+            width="100%" 
+            height="957" 
+            frameBorder={0} 
+            marginHeight={0} 
+            marginWidth={0} 
+            title="Wildwood Terrace Guest Registration"
+          ></iframe>
 
+        </div>
       </section>
 
-      {/* Your Global Footer */}
       <Footer />
     </main>
   );
